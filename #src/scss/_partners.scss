@@ -1,0 +1,58 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+$slides: ("1" : url("../img/png/partner1.png") no-repeat center, "2" : url("../img/png/partner2.png") no-repeat center, "3" : url("../img/png/partner3.png") no-repeat center, "4" : url("../img/png/partner4.png") no-repeat center, "5" : url("../img/png/partner2.png") no-repeat center, "6" : url("../img/png/partner3.png") no-repeat center, "7" : url("../img/png/partner4.png") no-repeat center, "8" : url("../img/png/partner2.png") no-repeat center);
+
+.partners {
+    overflow: hidden;
+    padding: 50px;
+    .description {
+        margin: 0px auto;
+        margin-bottom: 40px;
+        width: 740px;
+        text-align: center;
+        font-family: $fontMont;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: #050C33;
+        opacity: 0.7;
+    }
+    .slick-track {
+        display: flex;
+    }
+    .partners-slider-1 {
+        margin: 10px 0px;
+        @each $name, $url in $slides {
+            .slide--#{$name} {
+            background: $url;
+        }
+        }
+    }
+    .partners-slider-2 {
+        @each $name, $url in $slides {
+            .slide--#{$name} {
+            background: $url;
+        }
+    }
+    }
+    .slider__item {
+        height: 155px;
+        border: 1px solid #E5E5E5;
+        border-radius: 5px;
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners {
+        .slider__item {
+            height: 100px;
+            width: 200px;
+        }
+        .description {
+            width: 100%;
+            text-align: start;
+        }
+    }
+}

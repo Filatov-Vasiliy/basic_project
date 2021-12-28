@@ -1,0 +1,178 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+$bgSvgs: ( "item1" : url("../img/svg/support1.svg") no-repeat, "item2" : url("../img/svg/support2.svg") no-repeat, "item3" : url("../img/svg/support3.svg") no-repeat, "item4" : url("../img/svg/support4.svg") no-repeat, "item5" : url("../img/svg/support5.svg") no-repeat, "item6" : url("../img/svg/support6.svg") no-repeat, "item7" : url("../img/svg/support7.svg") no-repeat, "item8" : url("../img/svg/support8.svg") no-repeat); 
+
+.support {
+    padding-top: 40px;
+    &__body {
+        color: #050C33;
+        margin-left: -26px;
+        margin-bottom: -208px;
+        h2 {
+            text-align: center;
+            font-family: $fontMont;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 51px;
+            width: 400px;
+            margin: 0px auto 55px auto;
+            // text-shadow: 0px 3px 5px rgba($color: #000000, $alpha: .5);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__elem {
+        z-index: 4;
+        position: relative;
+        overflow: hidden;
+        width: 292px;
+        height: 292px;
+        padding: 30px 20px 0px 28px;
+        margin: 0px 5px 5px 0px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: .1);
+        background-color: white;
+        .elem__number {
+            font-family: $fontMont;
+            font-size: 12px;
+            opacity: .5;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .elem__name {
+            font-family: $fontMont;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 12px;
+        }
+        .elem__description {
+            font-family: $fontMont;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            opacity: .7;
+        }
+    }
+    @each $name, $url in $bgSvgs {
+        &__#{$name}::before {
+        content: "";
+        width: 84px;
+        height: 84px;
+        background: $url;
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        }
+    }
+    &__pandaimg {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1060px;
+        height: 839px;
+    }
+    &__laptop {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 660px;
+        height: 522px;
+        z-index: 4;
+    }
+}
+
+.scnd-block {
+    position: relative;
+    height: 839px;
+    background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
+    box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: .3);
+    .support__scnd {
+        padding-top: 205px;
+        position: relative;
+        z-index: 4;
+        .explanations {
+            margin-top: 192px;
+            margin-left: auto;
+            width: 580px;
+            h2 {
+                color: white;
+                width: 480px;
+                font-family: $fontMont;
+                font-size: 42px;
+                line-height: 51px;
+                font-weight: 700;
+            }
+            &__items {
+                display: flex;
+                .explanations__item {
+                    width: 256px;
+                    height: 100px;
+                    padding: 10px 0px 0px 13px;
+                    border-left: 3px solid #F14D34;
+                    margin-right: 20px;
+                    margin-top: 60px;
+                    p {
+                        color: white;
+                        opacity: .7;
+                        font-family: $fontMont;
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .scnd-block {
+        padding: 0px 10px;
+        height: 1000px;
+        .support__scnd {
+            .explanations {
+                margin: 0px;
+                width: 100%;
+                h2 {
+                    font-size: 30px;
+                    width: 100%;
+                }
+                &__items {
+                    flex-direction: column;
+                    .explanations__item {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .support {
+        padding: 10px;
+        &__body {
+            margin: 0px 0px -208px 0px;
+            h2 {
+                font-size: 30px;
+                width: 250px;
+                line-height: 35px;
+            }
+        }
+        &__elem {
+            width: 100%;
+            margin-right: 0px;
+        }
+        &__laptop {
+            width: 390px;
+            height: 450px;
+            svg {
+                width: 400px;
+            }
+        }
+    }
+}

@@ -1,0 +1,238 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+
+.plans {
+    position: relative;
+    .d-big-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .line {
+        width: 100%;
+        height: 1px;
+        opacity: .2;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        background-color: black;
+    }
+
+    &__body {
+        padding: 150px 0px;
+        h2 {
+            text-align: center;
+            font-family: $fontMont;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 4;
+        }
+        >p {
+            text-align: center;
+            width: 468px;
+            font-family: $fontMont;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #050C33;
+            opacity: .5;
+            margin: 0px auto;
+        }
+        a {
+            display: block;
+            width: 260px;
+            color: #050C33;
+            font-family: $fontMont;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline;
+            margin: 24px auto;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+        position: relative;
+        align-items: center;
+        margin-bottom: 52px;
+        z-index: 4;
+        h3 {
+            color: #F14D34;
+            font-family: $fontMont;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+    .scaled {
+        transform: scale(1.08);
+        box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+        .plans__btn {
+            color: white;
+            background-color: #F14D34;
+        }
+    }
+    .business-scale {
+        transform: scale(0.93);
+        box-shadow: none;
+        .plans__btn {
+            background-color: white;
+            color: #F14D34;
+        }
+    }
+    &-item {
+        padding: 70px 20px 60px;
+        p {
+            color: #4e5972;
+            font-family: $fontMont;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-left: 15px;
+        }
+        .plan-wrapper {
+            width: 330px;
+            margin: 0px auto;
+        }
+    }
+    &__btn {
+        color: #F14D34;
+        font-family: $fontMont;
+        font-size: 12px;
+        font-weight: 500;
+        width: 100%;
+        height: 60px;
+        border: 1px solid #F14D34;
+        border-radius: 5px;
+        margin-top: 20px;
+        background-color: white;
+        transition: .4s;
+        cursor: pointer;
+    }
+}
+
+.item {
+    &__start {
+        z-index: 1;
+        width: 360px;
+        height: 619px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-right: 15px;
+        background: white;
+        .plan-wrapper {
+            width: 300px;
+            margin: 0px auto;
+        }
+        transition: .4s;
+        .plans__btn {
+            margin-top: 80px;
+        }
+    }
+
+    &__business {
+        z-index: 2;
+        width: 390px;
+        height: 665px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background: white;
+        .plans__btn {
+            height: 65px;
+            margin-top: 80px;
+            background-color: #F14D34;
+            color: white;
+        }
+        p {
+            font-size: 18px;
+        }
+        transition: .4s;
+    }
+
+    &__vip {
+        z-index: 1;
+        width: 360px;
+        height: 619px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-left: 15px;
+        background: white;
+        .plan-wrapper {
+            width: 300px;
+            margin: 0px auto;
+        }
+        transition: .4s;
+    }
+
+    &__option {
+        margin-bottom: 20px;
+        display: flex;
+        width: 300px;
+        position: relative;
+        padding-left: 20px;
+    }
+    &__option::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 13px;
+        height: 10px;
+        background: url(../img/svg/Vector.svg) no-repeat center;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    .plans {
+        .scaled {
+            transform: scale(1);
+            box-shadow: none;
+            .plans__btn {
+                background-color: #F14D34;
+            }
+        }
+        .business-scale {
+            transform: scale(1);
+            box-shadow: none;
+        }
+        &__body { 
+            padding: 100px 20px 50px 20px;
+            h2 {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            >p {
+                width: 100%;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .plans__items {
+                flex-direction: column;
+                padding: 0px;
+                .plans-item {
+                    .plan-wrapper {
+                        width: 100%;
+                    }
+                    padding: 30px 10px 20px;
+                    margin: 10px 0px;
+                    width: 100%;
+                    height: auto;
+                    p {
+                        font-size: 14px;
+                    }
+                    .plans__btn {
+                        margin: 0px auto;
+                        background-color: #F14D34;
+                        color: white;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
