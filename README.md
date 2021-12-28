@@ -1,3 +1,3 @@
 WebProject
 
-Просмотр текущих результатов: https://1nfl1ght.github.io/drupal/dist/index.html
+Просмотр текущих результатов: https://filatov-vasiliy.github.io/basic_project/
