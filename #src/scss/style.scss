@@ -1,0 +1,121 @@
+@import "_nullstyle";
+@import "_fonts";
+@import "_icons";
+@import "_header";
+@import "_webform";
+@import "_services";
+@import "_support";
+@import "_plans";
+@import "_cases";
+@import "_team";
+@import "_reviews";
+@import "_partners";
+@import "_faq";
+
+$containerWidth: 1180;
+$minContainer: 1080;
+
+$fontMont: "Montserrat";
+$fontUbuntu: "Ubuntu";
+
+._container {
+    width: $containerWidth + px;
+    margin: 0 auto;
+}
+
+._min-container {
+    width: $minContainer + px;
+    margin: 0 auto;
+}
+
+.caption {
+    text-align: center;
+    h2 {
+        font-family: $fontMont;
+        font-size: 42px;
+        font-weight: 700;
+        color: #050C33;
+        margin-bottom: 20px;
+        line-height: 51px;
+    }
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    // background-color: rgba($color: #000000, $alpha: 0.4);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: scale(0);
+    top: 0;
+    left: 0;
+    a {
+        display: inline;
+    }
+    .body__form {
+        color: white;
+        padding: 40px 20px;
+        margin-top: 0px;
+        background: rgba($color: #171925, $alpha: 1);
+        border-radius: 5px;
+        .form__elem {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .form__button {
+            color: white;
+            width: 100%;
+            height: 60px;
+            border: 2px solid #f14d34;
+            border-radius: 5px;
+            background: #f14d34;
+            transition: .4s;
+            font-family: $fontMont;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .form__button:hover {
+            background: none;
+        }
+        .form__button:disabled {
+            cursor: not-allowed;
+            opacity: .6;
+            background: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .modal {
+        .body__form {
+            padding: 30px 20px;
+            width: 90%;
+            .form__elem {
+                width: 100%;
+                margin-bottom: 15px;
+                font-size: 12px;
+                height: 50px;
+            }
+            .comment {
+                height: 50px;
+                padding-top: 15px;
+            }
+            .form__button {
+                height: 50px;
+            }
+            .g-recaptcha {
+                margin: 15px 0px 15px 0px;
+            }
+        }
+    }
+}

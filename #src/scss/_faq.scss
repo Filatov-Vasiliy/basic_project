@@ -1,0 +1,71 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+
+.faq {
+    padding: 40px 0px;
+    background: url(../img/png/bg-faq.png) repeat center top;
+    background-attachment: fixed;
+    .caption {
+        margin: 30px 0px 80px 0px;
+    }
+    .faq-field {
+        .active {
+            h3 {
+                color: #f14e3b;
+            }
+            border-color:#f14d34;
+        }
+    }
+
+    &__item {
+        transition: .4s;
+        border: 3px solid transparent;
+        padding: 10px 12px 10px 30px;
+        .faq__title {
+            display: flex;
+            cursor: pointer;
+            span {
+                font-family: $fontMont;
+                font-weight: 700;
+                font-size: 12px;
+                color: #828a9b;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-top: 4px;
+            }
+            h3 {
+                color: #050c33;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 1.22;
+                transition: .4s;
+            }
+        }
+        .text {
+            display: none;
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                color: #4e5a73;
+                line-height: 1.37;
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .faq {
+        .caption {
+            margin-bottom: 0px;
+        }
+        .faq-field {
+            padding: 0px 20px;
+            .faq__item {
+                padding: 10px 12px 10px 15px;
+            }
+        }
+    }
+}
